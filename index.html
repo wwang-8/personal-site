@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>William Wang</title>
+  <!-- Link the compiled Tailwind CSS file -->
+  <link rel="stylesheet" href="dist/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="fluffy-boi.jpeg">
+</head>
+<body class="bg-white text-gray-800 font-sans">
+    
+  <!-- Navigation Bar -->
+  <div class="max-w-3xl mx-auto px-4 pt-10">
+    <nav class="flex items-center justify-between">
+      <!-- Left: Doodle Image -->
+      <img src="fluffy-boi.jpeg" alt="Navigation Doodle" class="h-[85px] w-auto" />
+  
+      <!-- Right: Nav Links in a flex container with equal spacing -->
+      <div class="flex items-center">
+        <a href="projects.html"
+           class="inline-block text-gray-800 transition duration-300 ease-out transform hover:text-green-600 hover:-translate-y-0.5">
+          Projects & Random
+        </a>
+        <a href="Resume - William Wang.pdf" target="_blank"
+           class="ml-6 inline-block text-gray-800 transition duration-300 ease-out transform hover:text-red-600 hover:-translate-y-0.5">
+          Resume
+        </a>
+        <a href="https://www.linkedin.com/in/williamwang88/" target="_blank"
+           class="ml-6 inline-block text-gray-800 transition duration-300 ease-out transform hover:text-blue-600 hover:-translate-y-0.5">
+          LinkedIn
+        </a>
+      </div>
+    </nav>
+  </div>
+  
+  
+
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <header class="py-8">
+        <h1 class="text-4xl font-bold text-left">
+            <span class="relative inline-block">
+                <!-- Trigger for first tooltip -->
+                <span 
+                  data-tooltip-target="tooltip-headshot"
+                  class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 
+                         focus:outline-none focus:ring-blue-300"
+                >
+                Hi! I'm Will
+            </span>
+                <!-- First tooltip container -->
+                <span id="tooltip-headshot"
+                      role="tooltip"
+                      class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium
+                             transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs
+                             opacity-0 tooltip w-[300px] max-w-none"
+                >
+                  <img src="headshot.jpg" alt="" class="w-full h-auto rounded-md" />
+                  <span class="tooltip-arrow" data-popper-arrow></span>
+                </span>
+              </span>
+        </h1>
+      </header>      
+    <!-- Intro Section -->
+    <section class="mb-8">
+      <p class="mb-4">
+        I'm a first-year at Northwestern University studying materials science & engineering. I hope to work at the intersection of computational materials and the energy sector.  
+      </p>
+      <p class="mb-4">
+        At Northwestern I am an undergraduate researcher in The Haile Group, wind tunnel engineer for NUSTARS (rocketry society), and mix team member for Concrete Canoe.
+      </p>
+      <p>
+        <span class="underline">
+            Try hovering over 
+            <span class="relative inline-block">
+                <!-- Trigger for first tooltip -->
+                <span 
+                  data-tooltip-target="tooltip-bold"
+                  class="cursor-pointer text-black font-semibold underline focus:ring-4 
+                         focus:outline-none focus:ring-blue-300"
+                >
+                bolded
+                </span>
+                <!-- First tooltip container -->
+                <span id="tooltip-bold"
+                      role="tooltip"
+                      class="absolute z-10 invisible block px-3 py-2 text-sm font-medium text-white
+                             transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs
+                             opacity-0 tooltip w-[400px] max-w-none"
+                >
+                Woah. I wonder what happens when you do that again.
+                  <span class="tooltip-arrow" data-popper-arrow></span>
+                </span>
+              </span>
+            text!
+        </span>
+
+        You can reach me at 
+        <span class="relative inline-block select-none">
+            <!-- Email link with hover underline -->
+            <a href="#" id="emailLink" class="relative inline-block text-blue-600 focus:outline-none group" onclick="handleEmailClick(event)">
+              willwang2028@u.northwestern.edu
+              <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-600 transition-all duration-1000 group-hover:w-full"></span>
+            </a>
+            <!-- Tooltip positioned below the email -->
+            <span id="copy-tooltip" class="absolute left-1/2 top-full mt-2 transform -translate-x-1/2 opacity-0 pointer-events-none transition-opacity duration-500 text-sm text-white bg-gray-900 px-2 py-1 rounded">
+              Copied!
+            </span>
+        </span>
+    </section>
+
+
+    <!-- Education Section -->
+    <section class="mb-8">
+        <h2 class="text-xl font-bold border-b-2 border-black inline-block pb-1 mb-4">
+          Education
+        </h2>
+        
+        <!-- First row: University on the left, location on the right -->
+        <div class="flex justify-between">
+          <div>
+            <h3 class="text-lg font-semibold">Northwestern University</h3>
+          </div>
+          <div>
+            <p class="text-gray-800 font-semibold">Evanston, Illinois</p>
+          </div>
+        </div>
+      
+        <!-- Second row: Degree on the left, date on the right -->
+        <div class="flex justify-between mt-1">
+          <div>
+            <p>BS in Materials Science &amp; Engineering</p>
+          </div>
+          <div>
+            <p>Sep 2024 - Jun 2028 (expected)</p>
+          </div>
+        </div>
+      </section>
+    <!-- Research Section -->
+    <section class="mb-8">
+      <h2 class="text-xl font-bold border-b-2 border-black inline-block pb-1 mb-4">
+        Research
+      </h2>
+      <p class="mb-4">
+        I'm an undergraduate student researcher in 
+        <a href="https://addis.ms.northwestern.edu/index.html#"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="relative inline-block text-blue-600 group">
+       Prof. Sossina Haile's energy materials group
+       <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-1000 group-hover:w-full"></span>
+     </a>
+        under Gordon Peiker and Sara Sand. I'm investigating Ba-doped, 
+        superprotonic,
+        <span class="relative inline-block">
+            <!-- Trigger for first tooltip -->
+            <span 
+              data-tooltip-target="tooltip-cdp"
+              class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 
+                     focus:outline-none focus:ring-blue-300"
+            >
+            CsH<sub>2</sub>PO<sub>4</sub> electrolytes 
+            </span>
+            <!-- First tooltip container -->
+            <span id="tooltip-cdp"
+                  role="tooltip"
+                  class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium
+                         transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs
+                         opacity-0 tooltip w-[400px] max-w-none"
+            >
+              <img src="CDP-plot.jpg" alt="" class="w-full h-auto rounded-md" />
+              <span class="tooltip-arrow" data-popper-arrow></span>
+            </span>
+          </span>
+        for fuel cells and implementing methods to accelerate 
+        impedance measurement time.
+      </p>
+      <p class="mb-4">
+        I previously worked with 
+        <a href="https://engfac.cooper.edu/topper"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="relative inline-block text-blue-600 group">
+       Prof. Robert Topper
+       <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-1000 group-hover:w-full"></span>
+     </a>
+        at Cooper Union where I
+        conducted density functional theory and Monte Carlo simulations of
+        <span class="relative inline-block">
+            <!-- Trigger for first tooltip -->
+            <span 
+              data-tooltip-target="tooltip-HF"
+              class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 
+                     focus:outline-none focus:ring-blue-300"
+            >
+            HF clusters.
+        </span>
+            <!-- First tooltip container -->
+            <span id="tooltip-HF"
+                  role="tooltip"
+                  class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium
+                         transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs
+                         opacity-0 tooltip w-[500px] max-w-none"
+            >
+              <img src="HF.png" alt="" class="w-full h-auto rounded-md" />
+              <span class="tooltip-arrow" data-popper-arrow></span>
+            </span>
+          </span>
+         I also developed 
+        <span class="relative inline-block">
+            <!-- Trigger for first tooltip -->
+            <span 
+              data-tooltip-target="tooltip-lj"
+              class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 
+                     focus:outline-none focus:ring-blue-300"
+            >
+            Lennard-Jones parameters
+            </span>
+            <!-- First tooltip container -->
+            <span id="tooltip-lj"
+                  role="tooltip"
+                  class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium
+                         transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs
+                         opacity-0 tooltip w-[800px] max-w-none"
+            >
+              <img src="WangSFP.png" alt="" class="w-full h-auto rounded-md" />
+              <span class="tooltip-arrow" data-popper-arrow></span>
+            </span>
+          </span>
+        of noble gas clusters for TransRot, a molecular simulation software.
+      </p>
+      <p>
+        In high school I was part of the
+    <a href="https://www.stan-x.org/about"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="relative inline-block text-blue-600 group">
+        Stan-X molecular biology program 
+       <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-1000 group-hover:w-full"></span>
+    </a> 
+        where I developed a 
+        <span class="relative inline-block">
+            <!-- Trigger for first tooltip -->
+            <span 
+              data-tooltip-target="tooltip-insertion"
+              class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 
+                     focus:outline-none focus:ring-blue-300"
+            >
+            novel transgenic insertion 
+        </span>
+            <!-- First tooltip container -->
+            <span id="tooltip-insertion"
+                  role="tooltip"
+                  class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium
+                         transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs
+                         opacity-0 tooltip w-[500px] max-w-none"
+            >
+              <img src="insertion.png" alt="" class="w-full h-auto rounded-md" />
+              <span class="tooltip-arrow" data-popper-arrow></span>
+            </span>
+          </span>
+        of a SX4 P-element in the <i>tapas</i> gene of 
+            <span class="relative inline-block">
+                <!-- Trigger for first tooltip -->
+                <span 
+                  data-tooltip-target="tooltip-flies"
+                  class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 
+                         focus:outline-none focus:ring-blue-300"
+                >
+                <i>drosophila melanogaster </i>
+            </span>
+                <!-- First tooltip container -->
+                <span id="tooltip-flies"
+                      role="tooltip"
+                      class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium
+                             transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs
+                             opacity-0 tooltip w-[500px] max-w-none"
+                >
+                  <img src="flies.png" alt="" class="w-full h-auto rounded-md" />
+                  <span class="tooltip-arrow" data-popper-arrow></span>
+                </span>
+              </span>
+              (fruit flies.)
+      </p>
+    </section>
+
+    <!-- Teaching Section -->
+    <section class="mb-8">
+      <h2 class="text-xl font-bold border-b-2 border-black inline-block pb-1 mb-4">
+        Activities
+      </h2>
+      <p class="mb-4">
+        I'm part of 
+        <a href="https://nustars.org/" target="_blank" rel="noopener noreferrer"
+           class="relative inline-block text-blue-600 group">
+          NUSTARS
+          <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-1000 group-hover:w-full"></span>
+        </a>
+        (Northwestern University Space Technology and Rocketry Society). I work as a wind tunnel engineer for NASA's student launch challenge. I developed 
+        <span class="relative inline-block">
+          <!-- Trigger for first tooltip -->
+          <span 
+            data-tooltip-target="tooltip-testing"
+            class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 
+                   focus:outline-none focus:ring-blue-300"
+          >
+            testing procedures
+          </span>
+          <!-- First tooltip container -->
+          <span id="tooltip-testing"
+                role="tooltip"
+                class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium
+                       transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs
+                       opacity-0 tooltip w-[300px] max-w-none"
+          >
+            <img src="rocket_front.jpg" alt="" class="w-full h-auto rounded-md" />
+            <span class="tooltip-arrow" data-popper-arrow></span>
+          </span>
+        </span>
+        for full-scale rockets at Embry Riddle Wind Tunnel Facility, used 
+      
+        <span class="relative inline-block">
+          <!-- Trigger for second tooltip -->
+          <span 
+            data-tooltip-target="tooltip-cad"
+            class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 
+                   focus:outline-none focus:ring-blue-300"
+          >
+            CAD
+          </span>
+          <!-- Second tooltip container -->
+          <span id="tooltip-cad"
+                role="tooltip"
+                class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium
+                       transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs
+                       opacity-0 tooltip w-[300px] max-w-none"
+          >
+            <img src="cad.png" alt="" class="w-full h-auto rounded-md" />
+            <span class="tooltip-arrow" data-popper-arrow></span>
+          </span>
+        </span>
+        to design mounting hardware, and analyzed 
+        <span class="relative inline-block">
+            <!-- Trigger for second tooltip -->
+            <span 
+              data-tooltip-target="tooltip-wind-tunnel-data"
+              class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 
+                     focus:outline-none focus:ring-blue-300"
+            >
+            wind tunnel data
+            </span>
+            <!-- Second tooltip container -->
+            <span id="tooltip-wind-tunnel-data"
+                  role="tooltip"
+                  class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium
+                         transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs
+                         opacity-0 tooltip w-[500px] max-w-none"
+            >
+              <img src="wt-data.png" alt="" class="w-full h-auto rounded-md" />
+              <span class="tooltip-arrow" data-popper-arrow></span>
+            </span>
+          </span>
+           with pandas.
+      </p>
+      
+      
+      
+      
+      <p class="mb-4">
+        I'm also a member of Northwestern's concrete canoe team where we race concrete canoes less
+        dense than water. I help make the mix and with compression testing to
+        develop a lighter stronger mix.
+      </p>
+    </section>
+
+    <!-- Random Section -->
+    <section class="">
+      <h2 class="text-xl font-bold border-b-2 border-black inline-block pb-1 mb-4">
+        Random
+      </h2>
+      <p class="mb-4">
+        In my free time I enjoy watching professional road cycling, riding my Cervélo soloist, cheering
+        on the 
+        <span 
+        data-tooltip-target="tooltip-nyk"
+        class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 
+               focus:outline-none focus:ring-blue-300"
+      >
+      New York Knicks 
+    </span>
+    <span 
+    id="tooltip-nyk"
+    role="tooltip"
+    class="text-white absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium
+           transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs
+           opacity-0 tooltip w-[300px] max-w-none"
+  >
+    <img src="knicks.jpg" alt="" class="w-full h-auto rounded-md" />
+    <span class="block mt-2 mb-2">
+      Game 4 Knicks at 76ers (2024 NBA Playoffs Round 1)
+    </span>
+    <span class="tooltip-arrow" data-popper-arrow></span>
+  </span>
+   
+        and Williams Racing.
+      </p>
+      <p>
+        Recently I've enjoyed watching Severance (Season 2), Invincible (Season 3), and The White Lotus (Season 3)
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="">
+    <div class="max-w-3xl mx-auto px-4 py-5 border-t border-gray-300 text-sm">
+      <p>© 2024-2025 William Wang</p>
+    </div>
+  </footer>  
+
+  <script>
+    function handleEmailClick(e) {
+      e.preventDefault();
+      navigator.clipboard.writeText("willwang2028@u.northwestern.edu")
+        .then(() => {
+          document.getElementById('emailLink').blur(); // Remove focus to prevent outlines
+          showTooltip();
+        })
+        .catch(err => console.error("Copy failed:", err));
+    }
+    
+    function showTooltip() {
+      const tooltip = document.getElementById("copy-tooltip");
+      tooltip.classList.remove("opacity-0");
+      tooltip.classList.add("opacity-100");
+      // Fade out the tooltip after 1.5 seconds
+      setTimeout(() => {
+        tooltip.classList.remove("opacity-100");
+        tooltip.classList.add("opacity-0");
+      }, 1500);
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+</html>
