@@ -3,61 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <title>Projects | William Wang</title>
-  <!-- Tailwind CSS via CDN (swap with your own build if needed) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Tailwind CSS via CDN (or your own build) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/x-icon" href="fluffy-boi.jpeg">
 </head>
 <body class="bg-white text-gray-800">
+  
   <!-- Navigation Bar -->
   <header class="max-w-3xl mx-auto px-4 pt-10">
     <nav class="flex items-center justify-between">
       <!-- Left: Back Arrow + Home -->
       <a href="index.html" class="inline-flex items-center text-gray-800 transition duration-300 ease-out transform hover:text-green-600 hover:-translate-y-0.5">
-        <!-- Simple left arrow symbol (you can replace with an inline SVG if you prefer) -->
         <span class="mr-1">←</span>
         Home
       </a>
       <img src="fluffy-boi.jpeg" alt="Navigation Doodle" class="h-[85px] w-auto" />
-
-
-      <!-- Right: Other Links -->
+      <!-- Right: Nav Links -->
       <div class="flex space-x-6">
         <a href="Resume - William Wang.pdf" target="_blank"
-        class="inline-block text-gray-800 transition duration-300 ease-out transform hover:text-red-600 hover:-translate-y-0.5">
-       Resume
-     </a>
-             <a href="https://www.linkedin.com/in/williamwang88/" target="_blank" class="inline-block text-gray-800 transition duration-300 ease-out transform hover:text-blue-600 hover:-translate-y-0.5">LinkedIn</a>
+           class="inline-block text-gray-800 transition duration-300 ease-out transform hover:text-red-600 hover:-translate-y-0.5">
+          Resume
+        </a>
+        <a href="https://www.linkedin.com/in/williamwang88/" target="_blank"
+           class="inline-block text-gray-800 transition duration-300 ease-out transform hover:text-blue-600 hover:-translate-y-0.5">
+          LinkedIn
+        </a>
       </div>
     </nav>
   </header>
-
+  
   <!-- Main Content -->
   <main class="max-w-3xl mx-auto px-4 py-8">
-    <!-- Page Title -->
     <h1 class="text-3xl font-bold mb-8">Projects & Random</h1>
-
-    <!-- Project List -->
     <ul class="space-y-8">
       <!-- Project 1 -->
       <li>
-        <!-- You can use any icon or symbol here. -->
         <div class="flex items-center space-x-2">
           <span class="text-xl">✦</span>
-          <a href="ACS_Fall_2024.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="relative inline-block text-blue-600 group font-semibold text-lg text-blue-600">
-          ACS Fall '24 Presentation (PDF)
-          <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-1000 group-hover:w-full"></span>
-       </a>
+          <a href="ACS_Fall_2024.pdf" target="_blank" rel="noopener noreferrer"
+             class="relative inline-block text-blue-600 group font-semibold text-lg">
+            ACS Fall '24 Presentation (PDF)
+            <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-1000 group-hover:w-full"></span>
+          </a>
         </div>
         <p class="text-gray-700 mt-2">
           Slides for a talk titled "TransRot: An open-source project for simulated annealing Monte Carlo calculations of molecular clusters,
           microhydrated species, and surface adsorbates" given by Prof. Robert Topper at the Fall 2024 American Chemical Society. Co-author for DFT and Monte-Carlo simulations of the HF<sub>6</sub> cluster.
         </p>
-        <p class="text-sm text-gray-500 mt-1">
-          Presented: August 2024
-        </p>
+        <p class="text-sm text-gray-500 mt-1">Presented: August 2024</p>
       </li>
 
       <!-- Project 2 -->
@@ -66,16 +60,15 @@
           <span class="text-xl">✦</span>
           <div>
             <a href="https://github.com/steventopper/TransRot/wiki/Noble-gas-clusters-1:-Adding-noble-gases-to-TransRot"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="relative inline-block text-blue-600 group font-semibold text-lg text-blue-600">
-            Lennard-Jones Parameters for Noble Gas Clusters (GitHub Wiki)
-            <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-1000 group-hover:w-full"></span>
-         </a>
+               target="_blank" rel="noopener noreferrer"
+               class="relative inline-block text-blue-600 group font-semibold text-lg">
+              Lennard-Jones Parameters for Noble Gas Clusters (GitHub Wiki)
+              <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-1000 group-hover:w-full"></span>
+            </a>
           </div>
         </div>
         <p class="text-gray-700 mt-2">
-          GitHub wiki detailing work on derivation and implementation of Lennards-Jones parameters of noble gas clusters in TransRot
+          GitHub wiki detailing work on derivation and implementation of Lennard-Jones parameters of noble gas clusters in TransRot
           to probe for minimum energy clusters–discussing:
         </p>
         <ul class="list-disc ml-6 py-2">
@@ -84,9 +77,7 @@
           <li>Optimizations of small noble gas clusters</li>
           <li>Possible discovery of local minima during annealing</li>
         </ul>
-        <p class="text-sm text-gray-500 mt-1">
-          Published: October 2024
-        </p>
+        <p class="text-sm text-gray-500 mt-1">Published: October 2024</p>
       </li>
 
       <!-- Project 3 -->
@@ -94,13 +85,11 @@
         <div class="flex items-center space-x-2">
           <span class="text-xl">✦</span>
           <div>
-            <a href="SX1238_Report.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="relative inline-block text-blue-600 group font-semibold text-lg text-blue-600">
-            <i>tapas</i> Gene Report (PDF)
-            <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-1000 group-hover:w-full"></span>
-         </a>
+            <a href="SX1238_Report.pdf" target="_blank" rel="noopener noreferrer"
+               class="relative inline-block text-blue-600 group font-semibold text-lg">
+              <i>tapas</i> Gene Report (PDF)
+              <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-1000 group-hover:w-full"></span>
+            </a>
           </div>
         </div>
         <p class="text-gray-700 mt-2">
@@ -109,68 +98,61 @@
         <ul class="list-disc ml-6 py-2">
           <li>Figures of the male + female genotypes and insertion site</li>
           <li>Transgenic insertion and gene's predicted expression</li>
-          <li><i>tapas</i> gene and fly genetics </li>
+          <li><i>tapas</i> gene and fly genetics</li>
           <li>Significance of research product and insertion location identification process</li>
         </ul>
-        <p class="text-sm text-gray-500 mt-1">
-          Completed: February 2024
-        </p>
+        <p class="text-sm text-gray-500 mt-1">Completed: February 2024</p>
       </li>
 
       <!-- Project 4 -->
       <li>
         <div class="flex items-center space-x-2">
-          <a href="WangSFP.png"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="relative inline-block text-blue-600 group font-semibold text-lg text-blue-600">
-          TransRot SFP (PDF)
-          <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-1000 group-hover:w-full"></span>
-       </a>
+          <a href="WangSFP.png" target="_blank" rel="noopener noreferrer"
+             class="relative inline-block text-blue-600 group font-semibold text-lg">
+            TransRot SFP (PDF)
+            <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-1000 group-hover:w-full"></span>
+          </a>
         </div>
-        <p class=" text-gray-700 mt-2">
-          Single Figure Presentation (SFP) developed for the 2024 Virtual Winter School on Computational Chemistry on TransRot Lennards-Jones parameters</i>.
+        <p class="text-gray-700 mt-2">
+          Single Figure Presentation (SFP) developed for the 2024 Virtual Winter School on Computational Chemistry on TransRot Lennard-Jones parameters.
         </p>
-        <p class="text-sm text-gray-500 mt-1">
-          Completed: January 2024
-        </p>
+        <p class="text-sm text-gray-500 mt-1">Completed: January 2024</p>
       </li>
 
       <!-- Project 5 -->
       <li>
         <div class="flex items-center space-x-2">
           <a href="https://acs.digitellinc.com/p/s/transrot-an-open-source-project-for-simulated-annealing-monte-carlo-calculations-of-molecular-clusters-microhydrated-species-and-surface-adsorbates-610290"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="relative inline-block text-blue-600 group font-semibold text-lg text-blue-600">
-          ACS Fall '24 Presentation Abstract
-          <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-1000 group-hover:w-full"></span>
-       </a>
+             target="_blank" rel="noopener noreferrer"
+             class="relative inline-block text-blue-600 group font-semibold text-lg">
+            ACS Fall '24 Presentation Abstract
+            <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500 transition-all duration-1000 group-hover:w-full"></span>
+          </a>
         </div>
         <p class="text-gray-700 mt-2">
-         Co-author on the abstract submitted for the talk titled "TransRot: An open-source project for simulated annealing
-         Monte Carlo calculations of molecular clusters, microhydrated species, and surface adsorbates</i>."
+          Co-author on the abstract submitted for the talk titled "TransRot: An open-source project for simulated annealing
+          Monte Carlo calculations of molecular clusters, microhydrated species, and surface adsorbates."
         </p>
-        <p class="text-sm text-gray-500 mt-1">
-          Presented: August 2024
-        </p>
+        <p class="text-sm text-gray-500 mt-1">Presented: August 2024</p>
       </li>
     </ul>
+    
     <h1 class="text-3xl font-bold mt-8 mb-4">Stick Figure Doodles</h1>
     <p class="text-gray-700">
       Recently I've started to draw some doodles as a way to express my experience and frustrations as a student. Here are a few below!
     </p>
-    <div class = "mb-4">
+    <div class="mb-4">
       <img src="graph.jpeg" alt="" class="w-auto h-auto">
-      <p class="text-sm text-gray-500 mt-1">
-        Drawn: March 2025
-      </p>
+      <p class="text-sm text-gray-500 mt-1">Drawn: March 2025</p>
     </div>
   </main>
-
-    <!-- Footer -->
-    <footer class="">
-      <div class="max-w-3xl mx-auto px-4 py-5 border-t border-gray-300 text-sm">
-        <p>© 2024-2025 William Wang</p>
-      </div>
-    </footer> 
+  
+  <!-- Footer -->
+  <footer class="">
+    <div class="max-w-3xl mx-auto px-4 py-5 border-t border-gray-300 text-sm">
+      <p>© 2024-2025 William Wang</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+</html>
