@@ -3,16 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <title>Projects | William Wang</title>
-  <!-- Tailwind CSS via CDN (swap with your own build if needed) -->
+  <!-- Tailwind CSS via CDN (or your own build) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/x-icon" href="fluffy-boi.jpeg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- Custom media query to swap text at 580px or less -->
+
+  <!-- Custom media queries for responsive tooltip widths and text swapping -->
   <style>
+    /* Swap text at 580px or less */
     @media (max-width: 580px) {
       .hide-sm { display: none !important; }
       .show-sm { display: inline !important; }
+    }
+    /* Tooltip width settings for mobile (max-width: 580px) */
+    @media (max-width: 580px) {
+      .tooltip-headshot { width: 150px; }
+      .tooltip-bold { width: 200px; }
+      .tooltip-cdp { width: 300px; }
+      .tooltip-HF { width: 350px; }
+      .tooltip-lj { width: 380px; }
+      .tooltip-insertion { width: 300px; }
+      .tooltip-flies { width: 250px; }
+      .tooltip-testing { width: 200px; }
+      .tooltip-cad { width: 200px; }
+      .tooltip-wind-tunnel-data { width: 300px; }
+      .tooltip-nyk { width: 150px; }
+    }
+    /* Tooltip width settings for tablet (min-width: 581px and max-width: 1024px) */
+    @media (min-width: 581px) and (max-width: 1024px) {
+      .tooltip-headshot { width: 200px; }
+      .tooltip-bold { width: 300px; }
+      .tooltip-cdp { width: 240px; }
+      .tooltip-HF { width: 400px; }
+      .tooltip-lj { width: 450px; }
+      .tooltip-insertion { width: 400px; }
+      .tooltip-flies { width: 250px; }
+      .tooltip-testing { width: 300px; }
+      .tooltip-cad { width: 300px; }
+      .tooltip-wind-tunnel-data { width: 350px; }
+      .tooltip-nyk { width: 250px; }
+    }
+    /* Tooltip width settings for laptop (min-width: 1025px) */
+    @media (min-width: 1025px) {
+      .tooltip-headshot { width: 250px; }
+      .tooltip-bold { width: 500px; }
+      .tooltip-cdp { width: 400px; }
+      .tooltip-HF { width: 500px; }
+      .tooltip-lj { width: 550px; }
+      .tooltip-insertion { width: 450px; }
+      .tooltip-flies { width: 350px; }
+      .tooltip-testing { width: 300px; }
+      .tooltip-cad { width: 300px; }
+      .tooltip-wind-tunnel-data { width: 500px; }
+      .tooltip-nyk { width: 300px; }
     }
   </style>
 </head>
@@ -51,9 +94,9 @@
           <span data-tooltip-target="tooltip-headshot" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
             Hi! I'm Will
           </span>
-          <!-- Headshot tooltip container -->
+          <!-- Headshot tooltip container with individual class -->
           <span id="tooltip-headshot" role="tooltip"
-                class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip w-[300px] max-w-none">
+                class="tooltip-headshot absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
             <img src="headshot.jpg" alt="" class="w-full h-auto rounded-md" />
             <span class="tooltip-arrow" data-popper-arrow></span>
           </span>
@@ -70,18 +113,18 @@
         At Northwestern I am an undergraduate researcher in The Haile Group, wind tunnel engineer for NUSTARS (rocketry society), and mix team member for Concrete Canoe.
       </p>
       <p>
-        <span class="underline">
+        <span class="underline decoration-2">
           Try 
           <span class="hide-sm">hovering over the</span>
           <span class="show-sm hidden">clicking on the</span>           
           <span class="relative inline-block">
             <!-- Trigger for bolded tooltip -->
-            <span data-tooltip-target="tooltip-bold" class="cursor-pointer text-black font-semibold underline focus:ring-4 focus:outline-none focus:ring-blue-300">
-               bolded
+            <span data-tooltip-target="tooltip-bold" class="cursor-pointer text-black font-semibold underline decoration-2 focus:ring-4 focus:outline-none focus:ring-blue-300">
+              bolded
             </span>
-            <!-- Bolded tooltip container -->
+            <!-- Bolded tooltip container with individual class -->
             <span id="tooltip-bold" role="tooltip"
-                  class="absolute z-10 invisible block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip w-[400px] max-w-none">
+                  class="tooltip-bold absolute z-10 invisible block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
               Woah. This only works for the small bolded text but there's 1 exception, let's see if you can find it!
               <span class="tooltip-arrow" data-popper-arrow></span>
             </span>
@@ -95,8 +138,8 @@
             willwang2028@u.northwestern.edu
             <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-600 transition-all duration-1000 group-hover:w-full"></span>
           </a>
-          <!-- Email tooltip container -->
-          <span id="copy-tooltip" class="absolute left-1/2 top-full mt-2 transform -translate-x-1/2 opacity-0 pointer-events-none transition-opacity duration-500 text-sm text-white bg-gray-900 px-2 py-1 rounded">
+          <!-- Email tooltip container with individual class -->
+          <span id="copy-tooltip" class="tooltip-copy absolute left-1/2 top-full mt-2 transform -translate-x-1/2 opacity-0 pointer-events-none transition-opacity duration-500 text-sm text-white bg-gray-900 px-2 py-1 rounded">
             Copied!
           </span>
         </span>
@@ -152,9 +195,9 @@
           <span data-tooltip-target="tooltip-cdp" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
             CsH<sub>2</sub>PO<sub>4</sub> electrolytes
           </span>
-          <!-- CDP tooltip container -->
+          <!-- CDP tooltip container with individual class -->
           <span id="tooltip-cdp" role="tooltip"
-                class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip w-[300px] max-w-none">
+                class="tooltip-cdp absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
             <img src="CDP-plot.jpg" alt="" class="w-full h-auto rounded-md" />
             <span class="tooltip-arrow" data-popper-arrow></span>
           </span>
@@ -175,9 +218,9 @@
           <span data-tooltip-target="tooltip-HF" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
             HF clusters.
           </span>
-          <!-- HF tooltip container -->
+          <!-- HF tooltip container with individual class -->
           <span id="tooltip-HF" role="tooltip"
-                class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip w-[300px] max-w-none">
+                class="tooltip-HF absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
             <img src="HF.png" alt="" class="w-full h-auto rounded-md" />
             <span class="tooltip-arrow" data-popper-arrow></span>
           </span>
@@ -188,9 +231,9 @@
           <span data-tooltip-target="tooltip-lj" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
             Lennard-Jones parameters
           </span>
-          <!-- LJ tooltip container -->
+          <!-- LJ tooltip container with individual class -->
           <span id="tooltip-lj" role="tooltip"
-                class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip w-[400px] max-w-none">
+                class="tooltip-lj absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
             <img src="WangSFP.png" alt="" class="w-full h-auto rounded-md" />
             <span class="tooltip-arrow" data-popper-arrow></span>
           </span>
@@ -210,9 +253,9 @@
           <span data-tooltip-target="tooltip-insertion" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
             novel transgenic insertion
           </span>
-          <!-- Insertion tooltip container -->
+          <!-- Insertion tooltip container with individual class -->
           <span id="tooltip-insertion" role="tooltip"
-                class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip w-[300px] max-w-none">
+                class="tooltip-insertion absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
             <img src="insertion.png" alt="" class="w-full h-auto rounded-md" />
             <span class="tooltip-arrow" data-popper-arrow></span>
           </span>
@@ -223,9 +266,9 @@
           <span data-tooltip-target="tooltip-flies" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
             <i>drosophila melanogaster</i>
           </span>
-          <!-- Flies tooltip container -->
+          <!-- Flies tooltip container with individual class -->
           <span id="tooltip-flies" role="tooltip"
-                class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip w-[300px] max-w-none">
+                class="tooltip-flies absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
             <img src="flies.png" alt="" class="w-full h-auto rounded-md" />
             <span class="tooltip-arrow" data-popper-arrow></span>
           </span>
@@ -252,9 +295,9 @@
           <span data-tooltip-target="tooltip-testing" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
             testing procedures
           </span>
-          <!-- Testing tooltip container -->
+          <!-- Testing tooltip container with individual class -->
           <span id="tooltip-testing" role="tooltip"
-                class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip w-[300px] max-w-none">
+                class="tooltip-testing absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
             <img src="rocket_front.jpg" alt="" class="w-full h-auto rounded-md" />
             <span class="tooltip-arrow" data-popper-arrow></span>
           </span>
@@ -265,9 +308,9 @@
           <span data-tooltip-target="tooltip-cad" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
             CAD
           </span>
-          <!-- CAD tooltip container -->
+          <!-- CAD tooltip container with individual class -->
           <span id="tooltip-cad" role="tooltip"
-                class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip w-[300px] max-w-none">
+                class="tooltip-cad absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
             <img src="cad.png" alt="" class="w-full h-auto rounded-md" />
             <span class="tooltip-arrow" data-popper-arrow></span>
           </span>
@@ -278,9 +321,9 @@
           <span data-tooltip-target="tooltip-wind-tunnel-data" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
             wind tunnel data
           </span>
-          <!-- Wind tunnel data tooltip container -->
+          <!-- Wind tunnel data tooltip container with individual class -->
           <span id="tooltip-wind-tunnel-data" role="tooltip"
-                class="absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip w-[300px] max-w-none">
+                class="tooltip-wind-tunnel-data absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
             <img src="wt-data.png" alt="" class="w-full h-auto rounded-md" />
             <span class="tooltip-arrow" data-popper-arrow></span>
           </span>
@@ -303,7 +346,7 @@
           New York Knicks
         </span>
         <span id="tooltip-nyk" role="tooltip"
-              class="text-white absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip w-[300px] max-w-none">
+              class="tooltip-nyk text-white absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
           <img src="knicks.jpg" alt="" class="w-full h-auto rounded-md" />
           <span class="block mt-2 mb-2">
             Game 4 Knicks at 76ers (2024 NBA Playoffs Round 1)
@@ -330,7 +373,7 @@
       e.preventDefault();
       navigator.clipboard.writeText("willwang2028@u.northwestern.edu")
         .then(() => {
-          document.getElementById('emailLink').blur(); // Remove focus to prevent outlines
+          document.getElementById('emailLink').blur();
           showTooltip("copy-tooltip");
         })
         .catch(err => console.error("Copy failed:", err));
