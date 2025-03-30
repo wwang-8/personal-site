@@ -28,6 +28,7 @@
       .tooltip-cad { width: 200px; }
       .tooltip-wind-tunnel-data { width: 300px; }
       .tooltip-nyk { width: 150px; }
+      .tooltip-soloist { width: 200px; }
     }
     /* Tooltip width settings for tablet (min-width: 581px and max-width: 1024px) */
     @media (min-width: 581px) and (max-width: 1024px) {
@@ -42,6 +43,7 @@
       .tooltip-cad { width: 300px; }
       .tooltip-wind-tunnel-data { width: 350px; }
       .tooltip-nyk { width: 250px; }
+      .tooltip-soloist { width: 250px; }
     }
     /* Tooltip width settings for laptop (min-width: 1025px) */
     @media (min-width: 1025px) {
@@ -56,6 +58,7 @@
       .tooltip-cad { width: 300px; }
       .tooltip-wind-tunnel-data { width: 500px; }
       .tooltip-nyk { width: 300px; }
+      .tooltip-soloist { width: 300px; }
     }
   </style>
 </head>
@@ -345,7 +348,20 @@
         Random
       </h2>
       <p class="mb-4">
-        In my free time I enjoy watching professional road cycling, riding my Cervélo soloist, cheering on the 
+        In my free time I enjoy watching professional road cycling, riding my 
+        <span class="relative inline-block">
+          <!-- Trigger for wind tunnel data tooltip -->
+          <span data-tooltip-target="tooltip-soloist" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
+            Cervélo soloist,
+          </span>
+          <!-- Wind tunnel data tooltip container with individual class -->
+          <span id="tooltip-soloist" role="tooltip"
+                class="tooltip-soloist absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
+            <img src="images/soloist.jpg" alt="" class="w-full h-auto rounded-md" />
+            <span class="tooltip-arrow" data-popper-arrow></span>
+          </span>
+        </span>
+         cheering on the 
         <span data-tooltip-target="tooltip-nyk" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
           New York Knicks
         </span>
