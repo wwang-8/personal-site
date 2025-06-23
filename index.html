@@ -19,7 +19,8 @@
     @media (max-width: 580px) {
       .tooltip-headshot { width: 150px; }
       .tooltip-bold { width: 200px; }
-      .tooltip-cdp { width: 300px; }
+      .tooltip-BKHP { width: 300px; }
+      .tooltip-hybrid { width: 270px; }
       .tooltip-HF { width: 350px; }
       .tooltip-lj { width: 380px; }
       .tooltip-insertion { width: 300px; }
@@ -27,14 +28,16 @@
       .tooltip-testing { width: 200px; }
       .tooltip-cad { width: 200px; }
       .tooltip-wind-tunnel-data { width: 300px; }
+      .tooltip-L1rocket { width: 200px; }
       .tooltip-nyk { width: 150px; }
-      .tooltip-soloist { width: 200px; }
+      .tooltip-soloist { width: 250px; }
     }
     /* Tooltip width settings for tablet (min-width: 581px and max-width: 1024px) */
     @media (min-width: 581px) and (max-width: 1024px) {
       .tooltip-headshot { width: 200px; }
       .tooltip-bold { width: 300px; }
-      .tooltip-cdp { width: 240px; }
+      .tooltip-BKHP { width: 240px; }
+      .tooltip-hybrid { width: 220px; }
       .tooltip-HF { width: 400px; }
       .tooltip-lj { width: 450px; }
       .tooltip-insertion { width: 400px; }
@@ -42,14 +45,16 @@
       .tooltip-testing { width: 300px; }
       .tooltip-cad { width: 300px; }
       .tooltip-wind-tunnel-data { width: 350px; }
+      .tooltip-L1rocket { width: 230px; }
       .tooltip-nyk { width: 250px; }
-      .tooltip-soloist { width: 250px; }
+      .tooltip-soloist { width: 300px; }
     }
     /* Tooltip width settings for laptop (min-width: 1025px) */
     @media (min-width: 1025px) {
       .tooltip-headshot { width: 250px; }
       .tooltip-bold { width: 500px; }
-      .tooltip-cdp { width: 400px; }
+      .tooltip-BKHP { width: 400px; }
+      .tooltip-hybrid { width: 350px; }
       .tooltip-HF { width: 500px; }
       .tooltip-lj { width: 550px; }
       .tooltip-insertion { width: 450px; }
@@ -57,8 +62,9 @@
       .tooltip-testing { width: 300px; }
       .tooltip-cad { width: 300px; }
       .tooltip-wind-tunnel-data { width: 500px; }
+      .tooltip-L1rocket { width: 300px; }
       .tooltip-nyk { width: 300px; }
-      .tooltip-soloist { width: 300px; }
+      .tooltip-soloist { width: 350px; }
     }
   </style>
 </head>
@@ -73,7 +79,7 @@
       <div class="flex items-center space-x-6">
         <a href="past_work.html"
            class="inline-block text-gray-800 transition duration-200 ease-out transform hover:text-green-600 hover:-translate-y-0.5">
-          <span class="hide-sm">Past Work & Random</span>
+          <span class="hide-sm">Past Work</span>
           <span class="show-sm hidden">Work</span>
         </a>
         <a href="work_files/Resume - William Wang.pdf" target="_blank"
@@ -114,31 +120,13 @@
     <!-- Intro Section -->
     <section class="mb-8">
       <p class="mb-4">
-        I'm a first-year at <span class="hide-sm">Northwestern University</span><span class="show-sm hidden">Northwestern</span> studying materials science & engineering. I hope to work at the intersection of computational materials and the energy sector.
+        I'm a rising second-year at <span class="hide-sm">Northwestern University</span><span class="show-sm hidden">Northwestern</span> studying materials science. I hope to work at the intersection of materials science and mechanical engineering to solve problems in the energy sector.
       </p>
       <p class="mb-4">
-        I'm an undergraduate researcher in the Haile Group (Materials and Devices for Sustainable Energy), wind tunnel engineer for NUSTARS (rocketry society), and mix team member for Concrete Canoe.
+        I'm an undergraduate researcher in the Haile Group (energy materials research lab) and education lead & payload engineer for NUSTARS (rocketry society).
       </p>
       <p>
-        <span>
-          Try 
-          <span class="hide-sm">hovering over the</span>
-          <span class="show-sm hidden">clicking on the</span>           
-          <span class="relative inline-block">
-            <!-- Trigger for bolded tooltip -->
-            <span data-tooltip-target="tooltip-bold" class="hover:underline cursor-pointer text-black font-semibold focus:ring-4 focus:outline-none focus:ring-blue-300">
-              bolded
-            </span>
-            <!-- Bolded tooltip container with individual class -->
-            <span id="tooltip-bold" role="tooltip"
-                  class="tooltip-bold absolute z-10 invisible block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
-              Woah. This only works for the small bolded text but there's 1 exception, let's see if you can find it!
-              <span class="tooltip-arrow" data-popper-arrow></span>
-            </span>
-          </span>
-          text!
-        </span>
-        You can reach me at 
+        Get in touch at 
         <span class="relative inline-block select-none">
           <!-- Email link with hover underline -->
           <a href="#" id="emailLink" class="relative inline-block text-blue-600 focus:outline-none group" onclick="handleEmailClick(event)">
@@ -189,27 +177,36 @@
         Research
       </h2>
       <p class="mb-4">
-        I'm an undergraduate student researcher in 
+        I'm an undergraduate researcher in 
         <a href="https://addis.ms.northwestern.edu/index.html#"
            target="_blank" rel="noopener noreferrer"
            class="relative inline-block text-blue-600 group">
-          Prof. Sossina Haile's energy materials group
+          Prof. Sossina Haile's energy materials group.
           <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-600 transition-all duration-1000 group-hover:w-full"></span>
         </a>
-        under Gordon Peiker and Sara Sand. I'm investigating Ba-doped, superprotonic,
+      I'm currently investigating conductivity in
         <span class="relative inline-block">
-          <!-- Trigger for CDP tooltip -->
-          <span data-tooltip-target="tooltip-cdp" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
-            CsH<sub>2</sub>PO<sub>4</sub> electrolytes
-          </span>
-          <!-- CDP tooltip container with individual class -->
-          <span id="tooltip-cdp" role="tooltip"
-                class="tooltip-cdp absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
-            <img src="images/CDP-plot.jpg" alt="" class="w-full h-auto rounded-md" />
+            <span data-tooltip-target="tooltip-BKHP" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
+              Ba<sub>3−x</sub>K<sub>x</sub>H<sub>x</sub>(PO<sub>4</sub>)<sub>2</sub>,
+            </span>
+          <span id="tooltip-BKHP" role="tooltip"
+                class="tooltip-BKHP absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
+            <img src="images/PWDR-06-18-BKHP-V1.png" alt="" class="w-full h-auto rounded-md" />
             <span class="tooltip-arrow" data-popper-arrow></span>
           </span>
         </span>
-        for fuel cells and implementing methods to accelerate impedance measurement time.
+        a superprotonic solid acid with potential applications as an electrolyte in fuel cells. I recently implemented a method to accelerate
+              <span class="relative inline-block">
+            <span data-tooltip-target="tooltip-hybrid" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
+        electrochemical impedance spectroscopy
+            </span>
+          <span id="tooltip-hybrid" role="tooltip"
+                class="tooltip-hybrid absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
+            <img src="images/Hybrid-Measurement.png" alt="" class="w-full h-auto rounded-md" />
+            <span class="tooltip-arrow" data-popper-arrow></span>
+          </span>
+        </span>
+         measurement times.
       </p>
       <p class="mb-4">
         I previously worked with 
@@ -248,7 +245,7 @@
         of noble gas clusters for TransRot, a molecular simulation software.
       </p>
       <p>
-        In high school I was part of the
+        I was part of the
         <a href="https://www.stan-x.org/about" target="_blank" rel="noopener noreferrer"
            class="relative inline-block text-blue-600 group">
           Stan-X molecular biology program 
@@ -296,7 +293,7 @@
           NUSTARS
           <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-600 transition-all duration-1000 group-hover:w-full"></span>
         </a>
-        (Northwestern University Space Technology and Rocketry Society). I work as a wind tunnel engineer for NASA's student launch challenge. I developed 
+        (Northwestern University Space Technology and Rocketry Society). Last year, I worked as a wind tunnel engineer for the NASA Student Launch Challenge. I developed 
         <span class="relative inline-block">
           <!-- Trigger for testing tooltip -->
           <span data-tooltip-target="tooltip-testing" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
@@ -337,9 +334,23 @@
         </span>
          with pandas.
       </p>
-      <p class="mb-4">
-        I'm also a member of Northwestern's concrete canoe team where we race concrete canoes less dense than water. I help make the mix and with compression testing to develop a lighter stronger mix.
-      </p>
+      <p class="mb-4">I was also recently L1 certified by the National Association of Rocketry (NAR) where I built my own 
+              <span class="relative inline-block">
+          <!-- Trigger for wind tunnel data tooltip -->
+          <span data-tooltip-target="tooltip-L1rocket" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
+            high powered rocket
+          </span>
+          <!-- Wind tunnel data tooltip container with individual class -->
+          <span id="tooltip-L1rocket" role="tooltip"
+                class="tooltip-L1rocket absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
+            <img src="images/L1-Rocket.png" alt="" class="w-full h-auto rounded-md" />
+            <span class="tooltip-arrow" data-popper-arrow></span>
+          </span>
+        </span>
+        
+        and collected flight data.</p>
+      
+      <p>As education lead, I am currently developing the onboarding program for new members as the team transitions to the Spaceport America Cup for the 2025-2026 school year. </p>
     </section>
     
     <!-- Random Section -->
@@ -352,12 +363,12 @@
         <span class="relative inline-block">
           <!-- Trigger for wind tunnel data tooltip -->
           <span data-tooltip-target="tooltip-soloist" class="cursor-pointer text-black font-semibold hover:underline focus:ring-4 focus:outline-none focus:ring-blue-300">
-            Cervélo soloist,
+            Cervélo Soloist,
           </span>
           <!-- Wind tunnel data tooltip container with individual class -->
           <span id="tooltip-soloist" role="tooltip"
                 class="tooltip-soloist absolute z-10 invisible block px-1.5 py-1.5 text-sm font-medium transition-opacity duration-300 bg-gray-900 rounded-md shadow-xs opacity-0 tooltip">
-            <img src="images/soloist.jpg" alt="" class="w-full h-auto rounded-md" />
+            <img src="images/soloist.png" alt="" class="w-full h-auto rounded-md" />
             <span class="tooltip-arrow" data-popper-arrow></span>
           </span>
         </span>
@@ -389,13 +400,6 @@
   <footer class="">
     <div class="max-w-3xl mx-auto px-4 py-5 border-t border-gray-300 text-sm flex justify-between items-center">
       <p>© 2024-2025 William Wang
-      <p>
-        <a href="https://github.com/WilliamWang24/personal-site-wwang" target="_blank" rel="noopener noreferrer"
-           class="relative inline-block group transition duration-300 ease-out transform hover:text-blue-600">
-          GitHub Repository
-          <span class="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-600 transition-all duration-1000 group-hover:w-full"></span>
-        </a>
-      </p>
     </div>
   </footer>
   
